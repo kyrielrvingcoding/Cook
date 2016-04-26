@@ -39,7 +39,6 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"--------%@", dic);
         NSDictionary *dataDic = dic[@"data"];
         
         // 本期推荐
@@ -56,7 +55,7 @@
             
             [self.moreCookbooksArray addObject:moreCookbooksModel];
         }
-    
+        [LoadingDataAnimation stopAnimation];
         [self reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

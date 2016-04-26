@@ -29,12 +29,27 @@
 - (void)requestData {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //www.xdmeishi.com/index.php?m=mobile&c=index&a=getMatcherSearchItems&keyword=芹菜&sessionId=f43db4b7e09f0b61717894dd078885d0
     NSDictionary *search = @{@"m":@"mobile",@"c":@"index",@"a":@"getCookbooksByKeyword", @"keyword":_keyword, @"sessionId":@"f43db4b7e09f0b61717894dd078885d0"};
     [manager GET:@"http://www.xdmeishi.com/index.php" parameters:search progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSArray *array= [[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil] objectForKey:@"data"];
+        [LoadingDataAnimation stopAnimation];
+        //没有搜索到数据，tableView不显示
+        if (array.count == 0) {
+            UIView *clearView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, SCREENWIDTH, SCREENHEIGHT - 64)];
+            clearView.backgroundColor = [UIColor whiteColor];
+            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 40, SCREENWIDTH - 40, 70)];
+            textLabel.textAlignment = NSTextAlignmentCenter;
+            textLabel.numberOfLines = 2;
+            textLabel.text = @"没有找到匹配菜谱。\n请尝试使用其他关键字搜索~~~";
+            [clearView addSubview:textLabel];
+            [self.view addSubview:clearView];
+            [_tableView removeFromSuperview];
+            return;
+        }
         for (NSDictionary *dic in array) {
             HomeMoreCookBooksModel *cookbooksModel = [[HomeMoreCookBooksModel alloc] init];
             [cookbooksModel setValuesForKeysWithDictionary:dic];
@@ -45,7 +60,6 @@
             [self.dataArray addObject:cookbooksModel];
         }
         [self.tableView reloadData];
-        [LoadingDataAnimation stopAnimation];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
@@ -53,6 +67,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = _keyword;
     [LoadingDataAnimation startAnimation];
     [self requestData];
     [self createTableView];

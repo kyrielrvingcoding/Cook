@@ -141,14 +141,15 @@
     
     for (int i = 0; i < self.hotCategoriesArray.count; i ++) {
      
-         HomeHotCategoriesModel *hotCategoriesModel = self.hotCategoriesArray[i];
-      UIButton *button = [self createButtonWithTitle:hotCategoriesModel.name imageName:@"tabbar_home" buttonNumber:i];
+        HomeHotCategoriesModel *hotCategoriesModel = self.hotCategoriesArray[i];
+        UIButton *button = [self createButtonWithTitle:hotCategoriesModel.name imageName:@"tabbar_home" buttonNumber:i];
         [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     }
    
 }
-- (void)click:(id)sender {
-    
+
+- (void)click:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"homeSearchButton" object:sender];
 }
 
 - (void)createHeaderView {

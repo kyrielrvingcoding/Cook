@@ -181,6 +181,10 @@
 #pragma mark ------SearchBar代理方法------
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
+    RecipeListTableViewController *listVC = [[RecipeListTableViewController alloc] init];
+    listVC.keyword = searchBar.text;
+    [self.navigationController pushViewController:listVC animated:YES];
+    //如果重复搜索直接返回
     if ([self.historySearchedArray containsObject:searchBar.text]) {
         return;
     }

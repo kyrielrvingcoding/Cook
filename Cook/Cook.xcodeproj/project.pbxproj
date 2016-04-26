@@ -744,6 +744,7 @@
 				TargetAttributes = {
 					77A8CEA71CCB042F00A5CB46 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5DKCYBP42M;
 					};
 					77A8CEC01CCB043000A5CB46 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1059,11 +1060,14 @@
 			baseConfigurationReference = 089C50D4E3CFCB84EE41AA60 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = Cook/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = Cook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cook.Cook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1072,11 +1076,14 @@
 			baseConfigurationReference = 36F4E54F7372A01C98D875CE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = Cook/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = Cook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cook.Cook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

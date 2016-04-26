@@ -25,8 +25,8 @@
         [self.contentView addSubview:_imageView];
         
         _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.bounds.size.height-10, (self.bounds.size.height-20)/2, 70, 20)];
-        _titleLabel.font = [UIFont systemFontOfSize:16.0f];
-        _titleLabel.textColor = [UIColor blueColor];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+        _titleLabel.textColor = [UIColor colorWithRed:240 / 255.0 green:160 / 255.0 blue:30 / 255.0 alpha:1.0];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.layer.anchorPoint = CGPointMake(0.5, 0.5);
         _titleLabel.transform = CGAffineTransformMakeRotation(M_PI/2);

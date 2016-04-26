@@ -31,7 +31,7 @@
     
     _containerView = [[UIView alloc] initWithFrame:SCREENBOUNDS];
     _containerView.backgroundColor = [UIColor whiteColor];
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREENWIDTH / 2 - 60 , SCREENHEIGHT / 2 - 60, 120, 120)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREENWIDTH * 0.38 , SCREENHEIGHT / 2 -  SCREENWIDTH * 0.12, SCREENWIDTH * 0.24, SCREENWIDTH * 0.24)];
     [_containerView addSubview:_imageView];
     //设置动画帧
     _imageView.animationImages=[NSArray arrayWithObjects:

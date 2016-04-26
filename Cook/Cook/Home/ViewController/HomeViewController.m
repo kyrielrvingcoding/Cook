@@ -10,6 +10,7 @@
 #import "HomeTableView.h"
 #import "HomeMoreCookBooksModelCell.h"
 #import "HomeMoreCookBooksModel.h"
+#import "RecipeListTableViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     self.navigationController.navigationBar.translucent = NO;
+    [LoadingDataAnimation startAnimation];
     
      _hometableView = [[HomeTableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 49) style:UITableViewStylePlain];
     [self.hometableView registerNib:[UINib nibWithNibName:@"HomeMoreCookBooksModelCell" bundle:nil] forCellReuseIdentifier:@"reuse"];
@@ -30,8 +32,16 @@
      _hometableView.dataSource = self;
     
     [self.view addSubview: _hometableView];
-
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchButton:) name:@"homeSearchButton" object:nil];
+    
+}
+
+- (void)searchButton:(NSNotification *)noti {
+    UIButton *button = noti.object;
+    RecipeListTableViewController *recipeListVC = [[RecipeListTableViewController alloc] init];
+    recipeListVC.keyword = button.titleLabel.text;
+    [self.navigationController pushViewController:recipeListVC animated:YES];
 }
 
 #pragma mark ------- tableView协议方法 ------

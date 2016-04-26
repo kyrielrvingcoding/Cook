@@ -53,7 +53,8 @@
         };
         
         UIButton *centerButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH * 0.08, self.bounds.size.height-SCREENWIDTH * 0.35, SCREENWIDTH * 0.18, SCREENWIDTH * 0.18)];
-        [centerButton setImage:[UIImage imageNamed:@"center_btn"] forState:UIControlStateNormal];
+        [centerButton setBackgroundImage:[UIImage imageNamed:@"center_btn"] forState:UIControlStateNormal];
+        [centerButton setTitle:@"热门" forState:UIControlStateNormal];
         [centerButton addTarget:self action:@selector(onCenterButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:circleView];
@@ -89,11 +90,11 @@
             circleCollectionView.transform = CGAffineTransformIdentity;
             circleCollectionView.alpha = 1.f;
             circleView.transform = CGAffineTransformIdentity;
-            circleView.alpha = 0.1;
+            circleView.alpha = 0.06;
         }];
     } else {
         circleCollectionView.alpha = 1.f;
-        circleView.alpha = 0.1;
+        circleView.alpha = 0.06;
     }
     self.hideMenu = NO;
 }
