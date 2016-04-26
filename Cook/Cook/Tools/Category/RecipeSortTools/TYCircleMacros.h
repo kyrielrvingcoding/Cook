@@ -12,6 +12,6 @@
 #define TYDefaultVisibleNum         4
 #define TYDefaultItemPadding        4
 #define TYCircleViewMargin         20
-#define TYCircleCellSize           CGSizeMake(80, 60)
+#define TYCircleCellSize           CGSizeMake(SCREENWIDTH * 0.2, SCREENWIDTH * 0.2 - 20)
 
 #endif 

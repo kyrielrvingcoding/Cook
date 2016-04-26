@@ -31,31 +31,27 @@
     
     _containerView = [[UIView alloc] initWithFrame:SCREENBOUNDS];
     _containerView.backgroundColor = [UIColor whiteColor];
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(140 , 200, 120,120)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREENWIDTH / 2 - 60 , SCREENHEIGHT / 2 - 60, 120, 120)];
     [_containerView addSubview:_imageView];
     //设置动画帧
     _imageView.animationImages=[NSArray arrayWithObjects:
-                                [UIImage imageNamed:@"1"],
-                                [UIImage imageNamed:@"2"],
-                                [UIImage imageNamed:@"3"],
-                                [UIImage imageNamed:@"4"],
-                                [UIImage imageNamed:@"5"],
-                                [UIImage imageNamed:@"6"],
-                                nil ];
+                                [UIImage imageNamed:@"1"], [UIImage imageNamed:@"2"],
+                                [UIImage imageNamed:@"3"], [UIImage imageNamed:@"4"],
+                                [UIImage imageNamed:@"5"], [UIImage imageNamed:@"6"], nil];
     
     //设置动画总时间
-    _imageView.animationDuration= 1;
+    _imageView.animationDuration = 1;
     //设置重复次数,0表示不重复
     _imageView.animationRepeatCount=0;
     //开始动画
     [_imageView startAnimating];
     
-    UILabel *Infolabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 320, SCREENWIDTH, 20)];
+    UILabel *Infolabel = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT / 2 + 60, SCREENWIDTH, 20)];
     Infolabel.backgroundColor = [UIColor clearColor];
     Infolabel.textAlignment = NSTextAlignmentCenter;
-    Infolabel.textColor = [UIColor colorWithRed:84.0/255 green:86./255 blue:212./255 alpha:1];
+    Infolabel.textColor = [UIColor colorWithRed:84.0 / 255 green:86.0 / 255 blue:212.0 / 255 alpha:1];
     Infolabel.font = [UIFont fontWithName:@"ChalkboardSE-Bold" size:12.0f];
-    Infolabel.text = @"正在努力加载……";
+    Infolabel.text = @"正在努力加载中……";
     [_containerView addSubview:Infolabel];
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     [window addSubview:_containerView];

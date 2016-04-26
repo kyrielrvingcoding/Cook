@@ -52,7 +52,7 @@
             [weakSelf setCircleMenuHidden:YES animated:YES];
         };
         
-        UIButton *centerButton = [[UIButton alloc]initWithFrame:CGRectMake(30, self.bounds.size.height-140, 70, 70)];
+        UIButton *centerButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH * 0.08, self.bounds.size.height-SCREENWIDTH * 0.35, SCREENWIDTH * 0.18, SCREENWIDTH * 0.18)];
         [centerButton setImage:[UIImage imageNamed:@"center_btn"] forState:UIControlStateNormal];
         [centerButton addTarget:self action:@selector(onCenterButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         

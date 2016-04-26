@@ -68,7 +68,7 @@
 #pragma mark ---- 创建TableView ------
 - (void)createTableView {
     
-    HomeHeaderView *homeHeaderView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH,SCREENWIDTH * 0.56)];
+    HomeHeaderView *homeHeaderView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH,SCREENWIDTH * 0.7)];
     self.tableHeaderView = homeHeaderView;
    
     

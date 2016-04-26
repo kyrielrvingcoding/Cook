@@ -87,6 +87,9 @@
         HomeAdvertsModel *model = _advertsArray[i];
         
         [imageView sd_setImageWithURL:[NSURL URLWithString:model.imageUrl]];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        imageView.clipsToBounds = YES;
         [viewsArray addObject:imageView];
     }
     if(viewsArray.count < 2) {
