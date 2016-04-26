@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" style="plain" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uj3-u8-XP9" customClass="MySelfTableView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" red="0.44180268490000002" green="0.8711988088" blue="0.88754734850000006" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="separatorColor" red="0.94223551949999995" green="1" blue="0.3385790199" alpha="1" colorSpace="calibratedRGB"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <color key="sectionIndexColor" red="0.24109422959999999" green="1" blue="0.25544582970000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="sectionIndexBackgroundColor" red="1" green="0.98611941940000003" blue="0.207114311" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="sectionIndexTrackingBackgroundColor" red="0.94223551949999995" green="1" blue="0.3385790199" alpha="1" colorSpace="calibratedRGB"/>
+            <point key="canvasLocation" x="361" y="55"/>
+        </tableView>
+    </objects>
+</document>

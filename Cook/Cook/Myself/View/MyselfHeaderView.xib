@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyselfHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="3000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vS-yH-nc3">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.65097778100000003" green="1" blue="0.84380191439999996" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别保密" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ4-iv-lE1">
+                    <rect key="frame" x="168" y="244" width="52" height="16"/>
+                    <color key="backgroundColor" red="0.94223551949999995" green="1" blue="0.3385790199" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已加入几天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-bA-RFK">
+                    <rect key="frame" x="176" y="283" width="65" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注的人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGU-nY-Umd">
+                    <rect key="frame" x="230" y="244" width="65" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTX-GD-YJD">
+                    <rect key="frame" x="120" y="283" width="26" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无签名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97n-wT-TgG">
+                    <rect key="frame" x="120" y="319" width="460" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-dV-aKW">
+                    <rect key="frame" x="120" y="240" width="38" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" tag="3001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ed8-7c-y6g">
+                    <rect key="frame" x="20" y="220" width="80" height="80"/>
+                    <color key="backgroundColor" red="1" green="0.75425228310000003" blue="0.98043187669999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="6li-Os-kIP"/>
+                        <constraint firstAttribute="height" constant="80" id="Xuv-Rf-PvV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7vS-yH-nc3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="1BL-0G-0hm"/>
+                <constraint firstItem="cTX-GD-YJD" firstAttribute="top" secondItem="zoO-dV-aKW" secondAttribute="bottom" constant="20" id="1EP-d3-qJB"/>
+                <constraint firstItem="gGU-nY-Umd" firstAttribute="centerY" secondItem="wJ4-iv-lE1" secondAttribute="centerY" id="1Ko-Iw-Q0G"/>
+                <constraint firstItem="gGU-nY-Umd" firstAttribute="leading" secondItem="wJ4-iv-lE1" secondAttribute="trailing" constant="10" id="4Mu-8r-TY3"/>
+                <constraint firstItem="7vS-yH-nc3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IJp-TS-lvR"/>
+                <constraint firstItem="wJ4-iv-lE1" firstAttribute="leading" secondItem="zoO-dV-aKW" secondAttribute="trailing" constant="10" id="R3h-RS-F8f"/>
+                <constraint firstItem="wJ4-iv-lE1" firstAttribute="centerY" secondItem="zoO-dV-aKW" secondAttribute="centerY" id="WAU-Xi-Bbt"/>
+                <constraint firstItem="hjm-bA-RFK" firstAttribute="centerY" secondItem="cTX-GD-YJD" secondAttribute="centerY" id="b8y-FE-nbS"/>
+                <constraint firstItem="hjm-bA-RFK" firstAttribute="leading" secondItem="cTX-GD-YJD" secondAttribute="trailing" constant="30" id="bmp-sY-DDK"/>
+                <constraint firstItem="97n-wT-TgG" firstAttribute="top" secondItem="cTX-GD-YJD" secondAttribute="bottom" constant="20" id="f4S-5F-ivc"/>
+                <constraint firstItem="97n-wT-TgG" firstAttribute="leading" secondItem="cTX-GD-YJD" secondAttribute="leading" id="feP-IK-icn"/>
+                <constraint firstItem="cTX-GD-YJD" firstAttribute="leading" secondItem="zoO-dV-aKW" secondAttribute="leading" id="g00-0e-L74"/>
+                <constraint firstAttribute="trailing" secondItem="7vS-yH-nc3" secondAttribute="trailing" id="hou-qK-wtU"/>
+                <constraint firstItem="zoO-dV-aKW" firstAttribute="top" secondItem="Ed8-7c-y6g" secondAttribute="top" constant="20" id="hud-zx-Izf"/>
+                <constraint firstItem="zoO-dV-aKW" firstAttribute="leading" secondItem="Ed8-7c-y6g" secondAttribute="trailing" constant="20" id="ith-9l-R7i"/>
+                <constraint firstItem="Ed8-7c-y6g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="oCj-wg-uIn"/>
+                <constraint firstItem="7vS-yH-nc3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tgF-cg-Xpw"/>
+                <constraint firstItem="Ed8-7c-y6g" firstAttribute="centerY" secondItem="7vS-yH-nc3" secondAttribute="centerY" constant="-40" id="veU-no-Adn"/>
+                <constraint firstAttribute="trailing" secondItem="97n-wT-TgG" secondAttribute="trailing" constant="20" id="zo5-cQ-T1P"/>
+            </constraints>
+            <connections>
+                <outlet property="addressLabel" destination="cTX-GD-YJD" id="yeP-Jc-21t"/>
+                <outlet property="backgroundImageView" destination="7vS-yH-nc3" id="u49-go-ox0"/>
+                <outlet property="careLabel" destination="gGU-nY-Umd" id="tCt-nF-1jH"/>
+                <outlet property="genderLabel" destination="wJ4-iv-lE1" id="ulG-df-wIP"/>
+                <outlet property="headerImageview" destination="Ed8-7c-y6g" id="cBw-70-8GI"/>
+                <outlet property="jionTimeLabel" destination="hjm-bA-RFK" id="5Ac-cf-BVM"/>
+                <outlet property="nicknameLabel" destination="zoO-dV-aKW" id="vMt-Qq-pwc"/>
+            </connections>
+            <point key="canvasLocation" x="456" y="356"/>
+        </view>
+    </objects>
+</document>
